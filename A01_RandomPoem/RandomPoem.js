@@ -2,22 +2,36 @@
 var RandomPoem;
 (function (RandomPoem) {
     let subjects = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
-    console.log(subjects);
+    //console.log(subjects);
     let predicates = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
-    console.log(predicates);
+    //console.log(predicates);
     let objects = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
-    console.log(objects);
-    let array1 = [];
-    let array2 = [];
-    let array3 = [];
-    for (let i = subjects.length; i >= 1; i--) {
-        console.log(i);
-        getVerse(array1[1], array2[2], array3[3]);
+    //console.log(objects);
+    //let array1: string[] = [];
+    //let array2: string[] = [];
+    //let array3: string[] = []; 
+    for (let i = 6; i >= 1; i--) {
+        //console.log(i);
+        console.log(getVerse(subjects, predicates, objects));
     }
     ;
     function getVerse(_sub, _pre, _obj) {
-        console.log(_sub + " " + _pre + " " + _obj);
-        return _sub + " " + _pre + " " + _obj;
+        //console.log(_sub +" " + _pre +" " + _obj);
+        //return _sub +" " + _pre +" " + _obj; 
+        let verse = " ";
+        let result1 = Math.floor(Math.random() * _sub.length);
+        verse = verse + _sub[result1] + " ";
+        _sub.splice(result1, 1);
+        //console.log(result1);
+        let result2 = Math.floor(Math.random() * _pre.length);
+        verse = verse + _pre[result2] + " ";
+        _pre.splice(result1, 1);
+        //console.log(result2);
+        let result3 = Math.floor(Math.random() * _obj.length);
+        verse = verse + _obj[result3] + " ";
+        _obj.splice(result1, 1);
+        //console.log(result3);
+        return verse;
     }
     ;
 })(RandomPoem || (RandomPoem = {}));

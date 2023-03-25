@@ -1,33 +1,53 @@
-namespace RandomPoem{ 
+namespace RandomPoem {
 
-let subjects: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore" ]; 
-console.log(subjects);
+    let subjects: string[] = ["Harry", "Hermine", "Ron", "Hagrid", "Snape", "Dumbledore"];
+    //console.log(subjects);
 
-let predicates: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
-console.log(predicates);
+    let predicates: string[] = ["braut", "liebt", "studiert", "hasst", "zaubert", "zerstört"];
+    //console.log(predicates);
 
-let objects: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
-console.log(objects);
+    let objects: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
+    //console.log(objects);
 
-let array1: string[] = [];
-let array2: string[] = [];
-let array3: string[] = []; 
-
-
-for (let i: number = subjects.length ; i >= 1; i--) { 
-    console.log(i);
-    getVerse(array1[1], array2[2], array3[3])
-
-};
+    //let array1: string[] = [];
+    //let array2: string[] = [];
+    //let array3: string[] = []; 
 
 
-function getVerse(_sub: string, _pre: string, _obj:string):string { 
-    console.log(_sub +" " + _pre +" " + _obj);
-    return _sub +" " + _pre +" " + _obj; 
+    for (let i: number = 6; i >= 1; i--) {
+        //console.log(i);
+        console.log(getVerse(subjects, predicates, objects));
 
-}; 
+    };
 
 
+    function getVerse(_sub: string[], _pre: string[], _obj: string[]): string {
+        //console.log(_sub +" " + _pre +" " + _obj);
+        //return _sub +" " + _pre +" " + _obj; 
+
+
+        let verse: string = " ";
+
+        let result1: number = Math.floor(Math.random() * _sub.length);
+        verse = verse + _sub[result1] + " ";
+        _sub.splice(result1, 1);
+        //console.log(result1);
+
+
+        let result2: number = Math.floor(Math.random() * _pre.length);
+        verse = verse + _pre[result2] + " ";
+        _pre.splice(result1, 1);
+        //console.log(result2);
+
+
+        let result3: number = Math.floor(Math.random() * _obj.length);
+        verse = verse + _obj[result3] + " ";
+        _obj.splice(result1, 1);
+        //console.log(result3);
+
+        return verse;
+
+    };
 
 
 }; 
