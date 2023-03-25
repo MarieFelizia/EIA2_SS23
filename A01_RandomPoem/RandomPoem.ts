@@ -32,13 +32,13 @@ namespace RandomPoem {
 
         let result2: number = Math.floor(Math.random() * _pre.length);
         verse = verse + _pre[result2] + " ";
-        _pre.splice(result1, 1);
+        _pre.splice(result2, 1);
         //console.log(result2);
 
 
         let result3: number = Math.floor(Math.random() * _obj.length);
         verse = verse + _obj[result3] + " ";
-        _obj.splice(result1, 1);
+        _obj.splice(result3, 1);
         //console.log(result3);
 
         return verse;
