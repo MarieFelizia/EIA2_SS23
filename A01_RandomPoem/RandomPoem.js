@@ -7,9 +7,6 @@ var RandomPoem;
     //console.log(predicates);
     let objects = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
     //console.log(objects);
-    //let array1: string[] = [];
-    //let array2: string[] = [];
-    //let array3: string[] = []; 
     for (let i = 6; i >= 1; i--) {
         //console.log(i);
         console.log(getVerse(subjects, predicates, objects));

@@ -9,11 +9,7 @@ namespace RandomPoem {
     let objects: string[] = ["Zaubertränke", "den Grimm", "Lupin", "Hogwarts", "die Karte des Rumtreibers", "Dementoren"];
     //console.log(objects);
 
-    //let array1: string[] = [];
-    //let array2: string[] = [];
-    //let array3: string[] = []; 
-
-
+     
     for (let i: number = 6; i >= 1; i--) {
         //console.log(i);
         console.log(getVerse(subjects, predicates, objects));
