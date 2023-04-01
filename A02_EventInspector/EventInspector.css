@@ -1,9 +1,45 @@
 body {
     font-family:'Courier New', Courier, monospace
-}; 
+}
+
+#button {
+    background-color: rgb(25, 87, 23); 
+    font-size: 30px;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left: 200px;
+    border-color: black;
+   
+}
 
 
-span { 
-    position: fixed;
-}; 
+#div0 {
+    height: 600px;; 
+    width: 600px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    position: absolute;
+    background-color: rgb(39, 154, 72);
+}
 
+#div1 {
+    height: 600px;; 
+    width: 600px; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    margin-left: 620px;
+    position: absolute;
+    background-color: rgb(7, 126, 122);
+}
+
+h1 {
+    color: rgb(25, 87, 23);
+    font-size: 35px;
+}
+
+#span { 
+    font-size: 20px;
+    font-weight: bold;
+}
