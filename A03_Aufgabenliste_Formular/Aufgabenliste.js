@@ -1,6 +1,13 @@
 "use strict";
 var Aufgabenliste;
 (function (Aufgabenliste) {
+    /*
+   Aufgabe: <A03_Aufgabenliste_Formular>
+   Name:<Marie Eckl>
+   Matrikel: <272409>
+   Datum: <08.04.23>
+   Zusammenarbeit mit Pia Schwer, Theresa Hauser
+   */
     console.log("App wird gestartet");
     window.addEventListener("load", handleLoad);
     function handleLoad() {
