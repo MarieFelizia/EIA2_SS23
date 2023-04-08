@@ -50,26 +50,28 @@
 
         <div class="task">
             <h2>Geschirr abwaschen</h2>
-            <p>Deadline: <input type="date" value="2023-04-20"> um <input type="time" value="19:00"></p>
+            <p>Status:
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            </p>
             <p>Zuständig:
                 <select>
                     <option value="Luca">Luca</option>
                     <option value="Maya">Maya</option>
                     <option value="Lina">Lina</option>
-                </select>
-            </p>
+                </select> 
+            <p>Deadline: <input type="date" value="2023-04-20"> um <input type="time" value="19:00"></p>
             <p>Kommentar: <input type="text" value="Töpfe nicht vergessen..."></p>
-            <p>Status:
-                <label><input type="radio" name="task-status" value="done">Erledigt</label>
-                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
-            </p>
             <button class="deleteTask">Löschen</button>
         </div>
 
 
         <div class="task">
             <h2>Flur putzen</h2>
-            <p>Deadline: <input type="date" value="2023-04-23"> um <input type="time" value="16:00"></p>
+            <p>Status:
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            </p>
             <p>Zuständig:
                 <select>
                     <option value="Luca">Luca</option>
@@ -77,11 +79,8 @@
                     <option value="Lina">Lina</option>
                 </select>
             </p>
+            <p>Deadline: <input type="date" value="2023-04-23"> um <input type="time" value="16:00"></p>
             <p>Kommentar: <input type="text" value="Bitte auch Staub wischen."></p>
-            <p>Status:
-                <label><input type="radio" name="task-status" value="done">Erledigt</label>
-                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
-            </p>
             <button class="deleteTask">Löschen</button>
         </div>
 
