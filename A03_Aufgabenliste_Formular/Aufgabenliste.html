@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenliste Formular</title>
+    <script src="Aufgabenliste.js"></script>
+    <link rel="stylesheet" href="Aufgabenliste.css">
+</head>
+
+<body>
+    <h1>WG Todo Liste</h1>
+
+
+    <div class="list">
+
+        <div class="task-form">
+            <h2>Neue Aufgabe erstellen</h2>
+            <form>
+                <label for="taskName">Aufgabe:</label>
+                <input type="text" id="taskName" name="taskName" required>
+
+                <label for="deadlineDate">Deadline Datum:</label>
+                <input type="date" id="deadlineDate" name="deadlineDate" required>
+
+                <label for="deadlineTime">Deadline Uhrzeit:</label>
+                <input type="time" id="deadlineTime" name="deadlineTime" required>
+
+                <label for="assignee">Zuständig:</label>
+                <select id="assignee" name="assignee" required>
+                    <option value="Luca">Luca</option>
+                    <option value="Maya">Maya</option>
+                    <option value="Lina">Lina</option>
+                </select>
+
+                <label for="comment">Kommentar:</label>
+                <textarea id="comment" name="comment"></textarea>
+
+                <label for="status">Status:</label>
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <br>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+                <br>
+                <button type="submit">Aufgabe erstellen</button>
+            </form>
+        </div>
+
+
+        <div class="task">
+            <h2>Geschirr abwaschen</h2>
+            <p>Deadline: <input type="date" value="2023-04-20"> um <input type="time" value="19:00"></p>
+            <p>Zuständig:
+                <select>
+                    <option value="Luca">Luca</option>
+                    <option value="Maya">Maya</option>
+                    <option value="Lina">Lina</option>
+                </select>
+            </p>
+            <p>Kommentar: <input type="text" value="Töpfe nicht vergessen..."></p>
+            <p>Status:
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            </p>
+            <button class="deleteTask">Löschen</button>
+        </div>
+
+
+        <div class="task">
+            <h2>Flur putzen</h2>
+            <p>Deadline: <input type="date" value="2023-04-23"> um <input type="time" value="16:00"></p>
+            <p>Zuständig:
+                <select>
+                    <option value="Luca">Luca</option>
+                    <option value="Maya">Maya</option>
+                    <option value="Lina">Lina</option>
+                </select>
+            </p>
+            <p>Kommentar: <input type="text" value="Bitte auch Staub wischen."></p>
+            <p>Status:
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            </p>
+            <button class="deleteTask">Löschen</button>
+        </div>
+
+
+        <div class="task">
+            <h2> Müll leeren</h2>
+            <p>Status:
+                <label><input type="radio" name="task-status" value="done">Erledigt</label>
+                <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            </p>
+            <p>Zuständig:
+                <select>
+                    <option value="Luca">Luca</option>
+                    <option value="Maya">Maya</option>
+                    <option value="Lina">Lina</option>
+                </select>
+            </p>
+            <p>Deadline: <input type="date" value="2023-04-20"> um <input type="time" value="19:00"></p>
+            <p>Kommentar: <input type="text" value="Papier Müll nicht vergessen!"></p>
+
+            <button class="deleteTask">Löschen</button>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
