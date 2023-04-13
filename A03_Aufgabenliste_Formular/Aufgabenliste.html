@@ -13,6 +13,38 @@
 <body>
     <h1>WG Todo Liste</h1>
 
+    <div class="form">
+        <h2>Neue Aufgabe erstellen</h2>
+        <form>
+            <label for="taskName">Aufgabe:</label>
+            <input type="text" id="taskName" name="taskName" required>
+
+            <label for="deadlineDate">Deadline Datum:</label>
+            <input type="date" id="deadlineDate" name="deadlineDate" required>
+
+            <label for="deadlineTime">Deadline Uhrzeit:</label>
+            <input type="time" id="deadlineTime" name="deadlineTime" required>
+
+            <label for="assignee">@</label>
+            <select id="assignee" name="assignee" required>
+                <option value="Luca">Luca</option>
+                <option value="Maya">Maya</option>
+                <option value="Lina">Lina</option>
+            </select>
+
+            <label for="comment">Kommentar:</label>
+            <textarea id="comment" name="comment"></textarea>
+
+            <label for="status"></label>
+            <label><input type="radio" name="task-status" value="done">Erledigt</label>
+            <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+            <br>
+            <button type="submit">Neue Aufgabe</button>
+        </form>
+    </div>
+
+
+
 
     <div class="list">
 
