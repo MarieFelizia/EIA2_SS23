@@ -53,10 +53,10 @@ var Aufgabenliste;
         <input type="text" id="taskName" placeholder="${newTask.task} ">
 
         <label for="deadlineDate">Deadline Datum:</label>
-        <input type="text" id="deadlineDate" placeholder="${newTask.date} ">
+        <input type="date" id="deadlineDate" placeholder="${newTask.date} ">
 
         <label for="deadlineTime">Deadline Uhrzeit:</label>
-        <input type="text" id="deadlineTime" placeholder="${newTask.time} ">
+        <input type="time" id="deadlineTime" placeholder="${newTask.time} ">
 
         <label for="assignee">@</label>
         <input type="text" id="asignee" placeholder=" ${newTask.name}">
