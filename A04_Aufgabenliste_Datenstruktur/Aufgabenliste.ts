@@ -12,14 +12,14 @@ namespace Aufgabenliste {
     window.addEventListener("load", handleLoad);
 
     function handleLoad(): void {
-        
+
         generateContent(data);
-        
+
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
     };
 
-    function taskElements(): void{
+    function taskElements(): void {
         const taskName = document.getElementById("taskName") as HTMLInputElement;
         const nameValue = taskName.value;
 
@@ -46,11 +46,11 @@ namespace Aufgabenliste {
 
         generateContent(newTask);
 
-  
-        
+
+
         data.push(newTask);
 
-      
+
 
         taskName.value = "";
         deadlineDate.value = "";
@@ -64,7 +64,7 @@ namespace Aufgabenliste {
 
         const newTaskElement = document.createElement("div");
         newTaskElement.classList.add("newTask")
-        
+
         newTaskElement.innerHTML = `
         
         <label for="taskName">Aufgabe:</label>
@@ -92,34 +92,27 @@ namespace Aufgabenliste {
 
 
         `;
+
         taskList.appendChild(newTaskElement);
         //newTaskElement.style.display = "none";
 
-       const deleteButton = newTaskElement.querySelector("#deleteTask");
-       if(deleteButton) {
+        const deleteButton = newTaskElement.querySelector("#deleteTask");
+        if (deleteButton) {
             deleteButton.addEventListener("click", () => {
 
-                newTaskElement.remove(); 
+                newTaskElement.remove();
             });
-   
-    }
 
-
-
+        };
 
     };
 
 
+};
 
 
-  
 
-  
-}; 
 
-    
-
-    
 
 
 

@@ -82,6 +82,7 @@ var Aufgabenliste;
                 newTaskElement.remove();
             });
         }
+        ;
     }
     ;
 })(Aufgabenliste || (Aufgabenliste = {}));
