@@ -8,8 +8,9 @@ namespace Aufgabenliste {
    Zusammenarbeit mit Pia Schwer, Theresa Hauser 
    */
 
-
-    window.addEventListener("load", handleLoad);
+   
+    
+   window.addEventListener("load", handleLoad);
 
     function handleLoad(): void {
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
@@ -40,8 +41,7 @@ namespace Aufgabenliste {
             comment: commentValue,
             status: false
         };
-
-        
+ 
         generateContent(newTask);
 
         data.push(newTask);
