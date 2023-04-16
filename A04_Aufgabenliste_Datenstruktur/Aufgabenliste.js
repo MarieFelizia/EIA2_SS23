@@ -10,7 +10,6 @@ var Aufgabenliste;
    */
     window.addEventListener("load", handleLoad);
     function handleLoad() {
-        generateContent(Aufgabenliste.data);
         let addTask = document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
     }
@@ -70,9 +69,6 @@ var Aufgabenliste;
         <br>
 
         <button id= "deleteTask" type="submit">Löschen</button>
-
-
-
         `;
         taskList.appendChild(newTaskElement);
         //newTaskElement.style.display = "none";
