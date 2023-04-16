@@ -83,20 +83,41 @@ namespace Aufgabenliste {
         <label><input type="radio" name="task-status" value="done">Erledigt</label>
         <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
 
+        <br>
+
+        <button id= "deleteTask" type="submit">Löschen</button>
+
+
+
         `;
         taskList.appendChild(newTaskElement);
         //newTaskElement.style.display = "none";
 
+       const deleteButton = newTaskElement.querySelector("#deleteTask");
+       if(deleteButton) {
+            deleteButton.addEventListener("click", () => {
+
+                newTaskElement.remove(); 
+            });
+   
+    }
+
+
+
 
     };
 
-    
+
+
+
+  
+
+  
+}; 
 
     
 
-
-
-};
+    
 
 
 
