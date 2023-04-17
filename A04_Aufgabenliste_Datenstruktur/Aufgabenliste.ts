@@ -15,6 +15,7 @@ namespace Aufgabenliste {
     function handleLoad(): void {
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
+        loaddata(); 
     };
 
     function taskElements(): void {
@@ -43,7 +44,7 @@ namespace Aufgabenliste {
         };
  
         generateContent(newTask);
-
+        
         data.push(newTask);
 
         taskName.value = "";
@@ -77,8 +78,8 @@ namespace Aufgabenliste {
         <label for="comment">Kommentar:</label>
         <input id="comment" placeholder=" ${newTask.comment}">
 
-        <label><input type="radio" name="task-status" value="done">Erledigt</label>
-        <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+        <label><input type="checkbox" name="task-status" value="done">Erledigt</label>
+        <label><input type="checkbox" name="task-status" value="in-progress">In Bearbeitung</label>
 
         <br>
 
@@ -98,6 +99,13 @@ namespace Aufgabenliste {
         };
 
     };
+
+
+    function loaddata(): void {
+        data.forEach(function (item) {
+            generateContent(item);
+        });
+    }
 
 
 };

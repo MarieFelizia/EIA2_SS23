@@ -12,6 +12,7 @@ var Aufgabenliste;
     function handleLoad() {
         let addTask = document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
+        loaddata();
     }
     ;
     function taskElements() {
@@ -63,8 +64,8 @@ var Aufgabenliste;
         <label for="comment">Kommentar:</label>
         <input id="comment" placeholder=" ${newTask.comment}">
 
-        <label><input type="radio" name="task-status" value="done">Erledigt</label>
-        <label><input type="radio" name="task-status" value="in-progress">In Bearbeitung</label>
+        <label><input type="checkbox" name="task-status" value="done">Erledigt</label>
+        <label><input type="checkbox" name="task-status" value="in-progress">In Bearbeitung</label>
 
         <br>
 
@@ -81,6 +82,11 @@ var Aufgabenliste;
         ;
     }
     ;
+    function loaddata() {
+        Aufgabenliste.data.forEach(function (item) {
+            generateContent(item);
+        });
+    }
 })(Aufgabenliste || (Aufgabenliste = {}));
 ;
 //# sourceMappingURL=Aufgabenliste.js.map
