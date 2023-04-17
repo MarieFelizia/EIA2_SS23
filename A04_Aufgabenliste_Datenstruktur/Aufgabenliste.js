@@ -28,12 +28,14 @@ var Aufgabenliste;
         const commentValue = comment.value;
         const newTask = {
             Input: [
-                { task: nameValue,
+                {
+                    task: nameValue,
                     date: dateValue,
                     time: timeValue,
                     name: asigneeValue,
                     comment: commentValue,
-                    status: false }
+                    status: false
+                }
             ]
         };
         generateContent(newTask);

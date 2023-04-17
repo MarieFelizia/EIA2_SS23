@@ -8,15 +8,15 @@ namespace Aufgabenliste {
    Zusammenarbeit mit Pia Schwer, Theresa Hauser 
    */
 
-   
-    
-   window.addEventListener("load", handleLoad);
+
+
+    window.addEventListener("load", handleLoad);
 
     function handleLoad(): void {
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
         generateContent(data)
-        
+
     };
 
     function taskElements(): void {
@@ -36,21 +36,24 @@ namespace Aufgabenliste {
         const commentValue = comment.value;
 
         const newTask: Todo = {
-            Input: [ 
-            {task: nameValue,
-            date: dateValue,
-            time: timeValue,
-            name: asigneeValue,
-            comment: commentValue,
-            status: false}
+            Input: [
+                {
+                    task: nameValue,
+                    date: dateValue,
+                    time: timeValue,
+                    name: asigneeValue,
+                    comment: commentValue,
+                    status: false
+                }
 
-        ]};
+            ]
+        };
 
 
- 
+
         generateContent(newTask);
-        
-        
+
+
 
         taskName.value = "";
         deadlineDate.value = "";
@@ -59,15 +62,15 @@ namespace Aufgabenliste {
         comment.value = "";
     };
 
-    
+
     function generateContent(_data: Todo): void {
         const taskList = document.getElementById("taskList") as HTMLUListElement;
 
-        for ( let x: number = 0; x < _data.Input.length; x ++) { 
+        for (let x: number = 0; x < _data.Input.length; x++) {
             const newTaskElement = document.createElement("div");
-        newTaskElement.classList.add("newTask")
+            newTaskElement.classList.add("newTask")
 
-        newTaskElement.innerHTML = `
+            newTaskElement.innerHTML = `
         
         <label for="taskName">Aufgabe:</label>
         <input type="text" id="taskName" placeholder="${_data.Input[x].task} ">
@@ -90,22 +93,22 @@ namespace Aufgabenliste {
         <br>
 
         <button id= "deleteTask" type="submit">Löschen</button>
-        `; 
+        `;
 
-        taskList.appendChild(newTaskElement);
-        //newTaskElement.style.display = "none";
+            taskList.appendChild(newTaskElement);
+            //newTaskElement.style.display = "none";
 
-        const deleteButton = newTaskElement.querySelector("#deleteTask");
-        if (deleteButton) {
-            deleteButton.addEventListener("click", function() {
-            newTaskElement.remove();
+            const deleteButton = newTaskElement.querySelector("#deleteTask");
+            if (deleteButton) {
+                deleteButton.addEventListener("click", function () {
+                    newTaskElement.remove();
 
-        });
+                });
 
+            };
+
+        };
     };
-
-}; 
-};
 
 
 
