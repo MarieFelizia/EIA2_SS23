@@ -12,7 +12,7 @@ var Aufgabenliste;
     function handleLoad() {
         let addTask = document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
-        loaddata();
+        generateContent(Aufgabenliste.data);
     }
     ;
     function taskElements() {
@@ -27,15 +27,16 @@ var Aufgabenliste;
         const comment = document.getElementById("comment");
         const commentValue = comment.value;
         const newTask = {
-            task: nameValue,
-            date: dateValue,
-            time: timeValue,
-            name: asigneeValue,
-            comment: commentValue,
-            status: false
+            Input: [
+                { task: nameValue,
+                    date: dateValue,
+                    time: timeValue,
+                    name: asigneeValue,
+                    comment: commentValue,
+                    status: false }
+            ]
         };
         generateContent(newTask);
-        Aufgabenliste.data.push(newTask);
         taskName.value = "";
         deadlineDate.value = "";
         deadlineTime.value = "";
@@ -43,26 +44,27 @@ var Aufgabenliste;
         comment.value = "";
     }
     ;
-    function generateContent(newTask) {
+    function generateContent(_data) {
         const taskList = document.getElementById("taskList");
-        const newTaskElement = document.createElement("div");
-        newTaskElement.classList.add("newTask");
-        newTaskElement.innerHTML = `
+        for (let x = 0; x < _data.Input.length; x++) {
+            const newTaskElement = document.createElement("div");
+            newTaskElement.classList.add("newTask");
+            newTaskElement.innerHTML = `
         
         <label for="taskName">Aufgabe:</label>
-        <input type="text" id="taskName" placeholder="${newTask.task} ">
+        <input type="text" id="taskName" placeholder="${_data.Input[x].task} ">
 
         <label for="deadlineDate">Deadline Datum:</label>
-        <input type="date" id="deadlineDate" placeholder="${newTask.date} ">
+        <input type="date" id="deadlineDate" placeholder="${_data.Input[x].date} ">
 
         <label for="deadlineTime">Deadline Uhrzeit:</label>
-        <input type="time" id="deadlineTime" placeholder="${newTask.time} ">
+        <input type="time" id="deadlineTime" placeholder="${_data.Input[x].time} ">
 
         <label for="assignee">@</label>
-        <input type="text" id="asignee" placeholder=" ${newTask.name}">
+        <input type="text" id="asignee" placeholder=" ${_data.Input[x].name}">
 
         <label for="comment">Kommentar:</label>
-        <input id="comment" placeholder=" ${newTask.comment}">
+        <input id="comment" placeholder=" ${_data.Input[x].comment}">
 
         <label><input type="checkbox" name="task-status" value="done">Erledigt</label>
         <label><input type="checkbox" name="task-status" value="in-progress">In Bearbeitung</label>
@@ -71,22 +73,19 @@ var Aufgabenliste;
 
         <button id= "deleteTask" type="submit">Löschen</button>
         `;
-        taskList.appendChild(newTaskElement);
-        //newTaskElement.style.display = "none";
-        const deleteButton = newTaskElement.querySelector("#deleteTask");
-        if (deleteButton) {
-            deleteButton.addEventListener("click", () => {
-                newTaskElement.remove();
-            });
+            taskList.appendChild(newTaskElement);
+            //newTaskElement.style.display = "none";
+            const deleteButton = newTaskElement.querySelector("#deleteTask");
+            if (deleteButton) {
+                deleteButton.addEventListener("click", function () {
+                    newTaskElement.remove();
+                });
+            }
+            ;
         }
         ;
     }
     ;
-    function loaddata() {
-        Aufgabenliste.data.forEach(function (item) {
-            generateContent(item);
-        });
-    }
 })(Aufgabenliste || (Aufgabenliste = {}));
 ;
 //# sourceMappingURL=Aufgabenliste.js.map

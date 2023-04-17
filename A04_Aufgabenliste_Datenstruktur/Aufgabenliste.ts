@@ -15,7 +15,8 @@ namespace Aufgabenliste {
     function handleLoad(): void {
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
-        loaddata(); 
+        generateContent(data)
+        
     };
 
     function taskElements(): void {
@@ -34,18 +35,22 @@ namespace Aufgabenliste {
         const comment = document.getElementById("comment") as HTMLInputElement;
         const commentValue = comment.value;
 
-        const newTask: Item = {
-            task: nameValue,
+        const newTask: Todo = {
+            Input: [ 
+            {task: nameValue,
             date: dateValue,
             time: timeValue,
             name: asigneeValue,
             comment: commentValue,
-            status: false
-        };
+            status: false}
+
+        ]};
+
+
  
         generateContent(newTask);
         
-        data.push(newTask);
+        
 
         taskName.value = "";
         deadlineDate.value = "";
@@ -55,28 +60,29 @@ namespace Aufgabenliste {
     };
 
     
-    function generateContent(newTask: Item): void {
+    function generateContent(_data: Todo): void {
         const taskList = document.getElementById("taskList") as HTMLUListElement;
 
-        const newTaskElement = document.createElement("div");
+        for ( let x: number = 0; x < _data.Input.length; x ++) { 
+            const newTaskElement = document.createElement("div");
         newTaskElement.classList.add("newTask")
 
         newTaskElement.innerHTML = `
         
         <label for="taskName">Aufgabe:</label>
-        <input type="text" id="taskName" placeholder="${newTask.task} ">
+        <input type="text" id="taskName" placeholder="${_data.Input[x].task} ">
 
         <label for="deadlineDate">Deadline Datum:</label>
-        <input type="date" id="deadlineDate" placeholder="${newTask.date} ">
+        <input type="date" id="deadlineDate" placeholder="${_data.Input[x].date} ">
 
         <label for="deadlineTime">Deadline Uhrzeit:</label>
-        <input type="time" id="deadlineTime" placeholder="${newTask.time} ">
+        <input type="time" id="deadlineTime" placeholder="${_data.Input[x].time} ">
 
         <label for="assignee">@</label>
-        <input type="text" id="asignee" placeholder=" ${newTask.name}">
+        <input type="text" id="asignee" placeholder=" ${_data.Input[x].name}">
 
         <label for="comment">Kommentar:</label>
-        <input id="comment" placeholder=" ${newTask.comment}">
+        <input id="comment" placeholder=" ${_data.Input[x].comment}">
 
         <label><input type="checkbox" name="task-status" value="done">Erledigt</label>
         <label><input type="checkbox" name="task-status" value="in-progress">In Bearbeitung</label>
@@ -84,30 +90,21 @@ namespace Aufgabenliste {
         <br>
 
         <button id= "deleteTask" type="submit">Löschen</button>
-        `;
+        `; 
 
         taskList.appendChild(newTaskElement);
         //newTaskElement.style.display = "none";
 
         const deleteButton = newTaskElement.querySelector("#deleteTask");
         if (deleteButton) {
-            deleteButton.addEventListener("click", () => {
+            deleteButton.addEventListener("click", function() {
+            newTaskElement.remove();
 
-                newTaskElement.remove();
-            });
-
-        };
+        });
 
     };
 
-
-    function loaddata(): void {
-        data.forEach(function (item) {
-            generateContent(item);
-        });
-    }
-
-
+}; 
 };
 
 
@@ -118,3 +115,4 @@ namespace Aufgabenliste {
 
 
 
+}; 
