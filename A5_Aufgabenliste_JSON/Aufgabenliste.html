@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aufgabenliste Formular</title>
+    <script src="Aufgabenliste.js"></script>
+    
+    <link rel="stylesheet" href="Aufgabenliste.css">
+</head>
+
+<body>
+    <h1>WG Todo Liste:</h1>
+
+    <div class="form">
+        <h2>Neue Aufgabe erstellen</h2>
+
+
+        <fieldset class="newTask">
+            <label for="taskName">Aufgabe:</label>
+            <input type="text" id="taskName" placeholder="Aufgabe hinzufügen">
+
+            <label for="deadlineDate">Deadline Datum:</label>
+            <input type="date" id="deadlineDate" placeholder="Deadline Datum">
+
+            <label for="deadlineTime">Deadline Uhrzeit:</label>
+            <input type="time" id="deadlineTime" placeholder="Deadline Uhrzeit">
+
+            <label for="assignee">@</label>
+            <input type="text" id="asignee" placeholder="Wer machts? ">
+
+            <label for="comment">Kommentar:</label>
+            <input id="comment" placeholder="Kommentar">
+
+            <br>
+
+            <button id="addTask" type="submit">Neue Aufgabe</button>
+
+        </fieldset>
+
+        <div id="taskList"></div>
+
+    </div>
+
+</body>
+
+</html>
