@@ -4,34 +4,34 @@ namespace AufgabenlisteA05 {
    Aufgabe: <A05_Aufgabenliste_JSON>
    Name:<Marie Eckl>
    Matrikel: <272409>
-   Datum: <18.04.23>
+   Datum: <20.04.23>
    Zusammenarbeit mit Pia Schwer, Theresa Hauser 
    */
 
-   export interface Item {
-    task: string;
-    date: string;
-    time: string;
-    name: string;
-    comment: string;
-    status: boolean;
- }
+    export interface Item {
+        task: string;
+        date: string;
+        time: string;
+        name: string;
+        comment: string;
+        status: boolean;
+    }
 
- export interface Todo {
-    [name: string]: Item[];
-    
- }
+    export interface Todo {
+        [name: string]: Item[];
+
+    }
 
     window.addEventListener("load", handleLoad);
 
     async function handleLoad(): Promise<void> {
         let addTask: HTMLButtonElement = <HTMLButtonElement>document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
-        
+
 
         let response: Response = await fetch("data.json");
         let content: string = await response.text();
-        let data: Todo = JSON.parse(content); 
+        let data: Todo = JSON.parse(content);
 
         generateContent(data)
     };
@@ -126,13 +126,5 @@ namespace AufgabenlisteA05 {
 
         };
     };
-
-
-
-
-
-
-
-
 
 }; 

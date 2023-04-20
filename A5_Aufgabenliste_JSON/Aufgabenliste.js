@@ -5,7 +5,7 @@ var AufgabenlisteA05;
    Aufgabe: <A05_Aufgabenliste_JSON>
    Name:<Marie Eckl>
    Matrikel: <272409>
-   Datum: <18.04.23>
+   Datum: <20.04.23>
    Zusammenarbeit mit Pia Schwer, Theresa Hauser
    */
     window.addEventListener("load", handleLoad);
