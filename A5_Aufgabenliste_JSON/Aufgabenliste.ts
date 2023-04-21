@@ -66,11 +66,7 @@ namespace AufgabenlisteA05 {
             ]
         };
 
-
-
         generateContent(newTask);
-
-
 
         taskName.value = "";
         deadlineDate.value = "";
