@@ -33,7 +33,7 @@ namespace AufgabenlisteA06 {
         addTask.addEventListener("click", taskElements);
 
 
-        let response: Response = await fetch("https://webuser.hs-furtwangen.de/~ecklmari/Database?command=find&collection=TaskList");
+        let response: Response = await fetch("https://webuser.hs-furtwangen.de/~ecklmari/Database/?command=find&collection=TaskList");
         let content: string = await response.text();
         let data: Todo = JSON.parse(content);
 
