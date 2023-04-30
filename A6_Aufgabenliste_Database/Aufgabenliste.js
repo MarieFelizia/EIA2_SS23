@@ -12,7 +12,7 @@ var AufgabenlisteA06;
     async function handleLoad() {
         let addTask = document.getElementById("addTask");
         addTask.addEventListener("click", taskElements);
-        let response = await fetch("https://webuser.hs-furtwangen.de/~ecklmari/Database?command=find&collection=TaskList");
+        let response = await fetch("https://webuser.hs-furtwangen.de/~ecklmari/Database/?command=find&collection=TaskList");
         let content = await response.text();
         let data = JSON.parse(content);
         generateContent(data);
