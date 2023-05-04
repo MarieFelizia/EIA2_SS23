@@ -1,3 +1,10 @@
+   /*
+   Aufgabe: <A08.1_Canvas_Grundlagen>
+   Name:<Marie Eckl>
+   Matrikel: <272409>
+   Datum: <04.05.23> 
+   */
+
 namespace L08_1_Canvas {
 
   window.addEventListener("load", handleLoad);
