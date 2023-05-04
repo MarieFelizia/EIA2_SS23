@@ -43,12 +43,13 @@ var L08_1_Canvas;
         ;
         // Punkte
         let dotColor = "silver";
-        let dotRadius = 2;
+        let minDotRadius = 1;
+        let maxDotRadius = 6;
         let numDots = 50;
-        for (let i = 0; i < numDots; i++) // Schleife, die die Anzahl der Punkte bestimmt 
-         {
+        for (let i = 0; i < numDots; i++) {
             let dotX = Math.random() * width;
             let dotY = Math.random() * (height / 2);
+            let dotRadius = Math.random() * (maxDotRadius - minDotRadius) + minDotRadius;
             crc2.fillStyle = dotColor;
             crc2.beginPath();
             crc2.arc(dotX, dotY, dotRadius, 0, 2 * Math.PI);
