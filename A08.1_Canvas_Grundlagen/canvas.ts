@@ -116,7 +116,7 @@ namespace L08_1_Canvas {
     (let x = 0; x <= width; x += 10) // schleife von 0 bis zur Breite des Canvas und Erhöhung um 10px
     {
       let y = waveY + Math.sin(x * 0.01) * 20; // für jeden x Wert ein y Wert berechnet, Kurve durch sinus Funktion mit Frequenz 0.01 und Amplitude 20
-      crc2.lineTo(x, y); // Linienzug der Welle auf Canvas gezeichnet
+      crc2.lineTo(x, y); // Linie der Welle auf Canvas gezeichnet
     };
 
     crc2.lineTo(width, height);
