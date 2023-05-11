@@ -200,7 +200,7 @@ namespace L08_Luftfahrt {
 
         //Windsack
         crc2.beginPath();
-        crc2.fillStyle = "darkred";
+        crc2.fillStyle = "#d90000";
         crc2.moveTo(_position.x, _position.y);
         crc2.lineTo(420, 500);
         crc2.lineTo(500, 510);
@@ -218,6 +218,7 @@ namespace L08_Luftfahrt {
         crc2.fillStyle = "black";
         crc2.arc(_position.x, _position.y, radius, 0, Math.PI * 2);
         crc2.fill();
+        crc2.closePath(); 
 
         // Beine
         crc2.save();
