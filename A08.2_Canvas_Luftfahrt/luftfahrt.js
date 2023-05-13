@@ -15,12 +15,11 @@ var L08_Luftfahrt;
     function handleLoad(_event) {
         let canvas = document.querySelector("canvas");
         crc2 = canvas.getContext("2d");
-        let posMountains = { x: 0, y: 450 };
         drawBackground();
         drawSun({ x: 100, y: 75 });
         drawCloud({ x: 800, y: 120 });
-        drawMountains(posMountains, 50, 200, "grey", "lightgrey");
-        drawFrontMountain({ x: -50, y: 325 }, 800, 250, "grey");
+        drawMountains({ x: 0, y: 450 }, 50, 200, "grey", "lightgrey");
+        drawFrontMountain({ x: -50, y: 325 }, 800, 250);
         drawEllipse({ x: 550, y: 520 }, 220, 60);
         drawTree({ x: 220, y: 500 });
         drawTree({ x: 80, y: 540 });
@@ -104,7 +103,7 @@ var L08_Luftfahrt;
         crc2.restore();
     }
     ;
-    function drawFrontMountain(_position, _base, _height, _color) {
+    function drawFrontMountain(_position, _base, _height) {
         crc2.save();
         crc2.translate(_position.x, _position.y);
         crc2.beginPath();
@@ -112,7 +111,7 @@ var L08_Luftfahrt;
         crc2.lineTo(_base / 2, _height / 2);
         crc2.lineTo(0, -_height / 2);
         crc2.closePath();
-        crc2.fillStyle = _color;
+        crc2.fillStyle = "grey";
         crc2.fill();
         crc2.restore();
     }
