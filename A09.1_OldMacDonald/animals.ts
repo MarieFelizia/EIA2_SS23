@@ -8,7 +8,6 @@ namespace L09_OldMacDonald {
         portion: number;
         amount: number;
 
-
         constructor(_name: string, _type: string, _sound: string, _food: string, _portion: number, _amount: number) {
             this.name = _name;
             this.type = _type;
@@ -16,8 +15,6 @@ namespace L09_OldMacDonald {
             this.food = _food;
             this.portion = _portion;
             this.amount = _amount;
-
-
         };
 
         singTheSong(): string {
