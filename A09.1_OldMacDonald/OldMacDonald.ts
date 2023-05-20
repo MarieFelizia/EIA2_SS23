@@ -6,7 +6,7 @@ namespace L09_OldMacDonald {
     Matrikel: <272409>
     Datum: <20.05.23> 
     Zusammenarbeit: - 
-    Quellen: ChatGPT, Jirka Skript, Code Lea Langer, Code von Mitbewohnerin
+    Quellen: ChatGPT, Jirka Skript, Code Lea Lange, Code von Mitbewohnerin
     */
 
     window.addEventListener("load", handleLoad);
