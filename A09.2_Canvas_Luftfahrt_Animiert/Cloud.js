@@ -9,8 +9,8 @@ var L09_Luftfahrt;
             if (_position)
                 this.position = _position;
             else
-                this.position = new L09_Luftfahrt.Vector(30, 100); // position wenn Vektor nicht angegeben ist
-            this.velocity = new L09_Luftfahrt.Vector(30, 0); //start
+                this.position = new L09_Luftfahrt.Vector(30, 100);
+            this.velocity = new L09_Luftfahrt.Vector(30, 0); //start 
             this.size = _size;
         }
         move(_timeslice) {

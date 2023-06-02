@@ -6,7 +6,7 @@ var L09_Luftfahrt;
         velocity;
         size;
         constructor(_size, _position) {
-            if (_position) //kein Vektor angegeben
+            if (_position)
                 this.position = _position;
             else
                 this.position = new L09_Luftfahrt.Vector(Math.random() * L09_Luftfahrt.crc2.canvas.width, Math.random() * L09_Luftfahrt.crc2.canvas.height);

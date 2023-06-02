@@ -19,7 +19,6 @@ var L09_Luftfahrt;
             this.x += _addend.x;
             this.y += _addend.y;
         }
-        //vektor mit zufälliger richtung in einem bestimmten Längenbereich
         random(_minLength, _maxLength) {
             let length = _minLength + Math.random() * (_maxLength - _minLength);
             let direction = Math.random() * 2 * Math.PI;

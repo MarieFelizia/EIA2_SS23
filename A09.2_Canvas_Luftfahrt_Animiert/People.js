@@ -16,9 +16,7 @@ var L09_Luftfahrt;
             let offset = new L09_Luftfahrt.Vector(this.velocity.x, this.velocity.y);
             offset.scale(_timeslice);
             this.position.add(offset);
-            // Überprüfe, ob die Person das rechte Ende des Bildes erreicht hat
             if (this.position.x > L09_Luftfahrt.crc2.canvas.width) {
-                // Setze die Person zurück auf den Startpunkt
                 this.position.x = 100;
                 this.position.y = 500;
             }

@@ -25,9 +25,9 @@ namespace L09_Luftfahrt {
             offset.scale(_timeslice);
             this.position.add(offset);
 
-            // Überprüfe, ob die Person das rechte Ende des Bildes erreicht hat
+          
             if (this.position.x > crc2.canvas.width) {
-                // Setze die Person zurück auf den Startpunkt
+                
                 this.position.x = 100;
                 this.position.y = 500;
 

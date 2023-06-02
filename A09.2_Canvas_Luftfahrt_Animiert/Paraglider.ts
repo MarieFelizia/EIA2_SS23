@@ -8,13 +8,13 @@ namespace L09_Luftfahrt {
         constructor(_size: number, _position?: Vector) {
 
 
-            if (_position) //kein Vektor angegeben
+            if (_position) 
                 this.position = _position;
             else
                 this.position = new Vector(Math.random() * crc2.canvas.width, Math.random() * crc2.canvas.height);
 
-            this.velocity = new Vector(50, 0);
-            this.velocity.random(200, 200);
+            this.velocity = new Vector(10, 0);
+            this.velocity.random(70, 70);
         }
 
         move(_timeslice: number): void {
@@ -24,7 +24,7 @@ namespace L09_Luftfahrt {
             this.position.add(offset);
 
             if (this.position.y >= 420) {
-                // Setze die Paraglider-Position auf eine zufällige Position im Bild
+         
                 this.position = new Vector(Math.random() * crc2.canvas.width, Math.random() * 500);
             }
 

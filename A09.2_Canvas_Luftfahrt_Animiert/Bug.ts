@@ -8,7 +8,7 @@ namespace L09_Luftfahrt {
         constructor(_size: number, _position?: Vector) {
 
 
-            if (_position) //kein Vektor angegeben
+            if (_position) 
                 this.position = _position;
             else
                 this.position = new Vector(Math.random() * crc2.canvas.width, Math.random() * crc2.canvas.height);

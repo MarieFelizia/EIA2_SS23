@@ -11,9 +11,9 @@ namespace L09_Luftfahrt {
             if (_position)
                 this.position = _position;
             else
-                this.position = new Vector(30, 100); // position wenn Vektor nicht angegeben ist
+                this.position = new Vector(30, 100); 
 
-            this.velocity = new Vector(30, 0); //start
+            this.velocity = new Vector(30, 0); //start 
 
             this.size = _size;
         }
