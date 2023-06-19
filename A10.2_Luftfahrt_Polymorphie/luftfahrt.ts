@@ -3,8 +3,7 @@ Aufgabe: <A10_Luftfahrt>
 Name:<Marie Eckl>
 Matrikel: <272409>
 Datum: <19.06.23> 
-Zusammenarbeit mit Theresa Hauser, Pia Schwer
-Quellen: ChatGPT, Code von Jirka, Code von Pia Schwer, Code von Theresa Hauser */
+Quellen: ChatGPT, Code Jirka, Code von Theresa Hauser, Code von Pia Schwer */
 
 namespace L10_Luftfahrt {
 
