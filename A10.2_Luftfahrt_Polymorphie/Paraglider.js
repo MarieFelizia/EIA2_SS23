@@ -3,7 +3,6 @@ var L10_Luftfahrt;
 (function (L10_Luftfahrt) {
     class Paraglider extends L10_Luftfahrt.Moveable {
         activity;
-        color;
         constructor() {
             let randomX = Math.random() * (L10_Luftfahrt.crc2.canvas.width - 100);
             let position = new L10_Luftfahrt.Vector(randomX + 300, 420);

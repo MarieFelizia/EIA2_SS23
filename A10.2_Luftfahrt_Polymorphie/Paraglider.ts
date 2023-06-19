@@ -2,7 +2,7 @@ namespace L10_Luftfahrt {
     
     export class Paraglider extends Moveable {
         activity: string;
-        color: string;
+        
 
         constructor() {
             let randomX: number = Math.random() * (crc2.canvas.width - 100);
